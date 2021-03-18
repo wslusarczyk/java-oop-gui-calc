@@ -23,6 +23,7 @@ public class CalculatorController {
     public void start() {
         OperationType operationType = userInterface.getOperationType();
         while (!operationType.equals(OperationType.FINISH)) {
+        // switcha dodac
             if (operationType.equals(OperationType.ADDITION)) {
                 List<Double> arguments = userInterface.getArguments();
                 double sumResoult = calculator.sum(arguments.get(0), arguments.get(1));
@@ -35,7 +36,7 @@ public class CalculatorController {
                 double lastAns = calculator.lastAns();
                 userInterface.showResult(lastAns);
             }
-            userInterface.showMessage("Podaj poprawną operacje");
+            userInterface.showMessage("Podaj poprawną operacje2");
         operationType = userInterface.getOperationType();
         }
 
