@@ -2,12 +2,9 @@ package controller;
 
 import model.ICalculator;
 import model.OperationType;
-import model.SimpleCalculator;
-import view.CLI;
 import view.IUserInterface;
 
 import java.util.List;
-import java.util.Random;
 
 public class CalculatorController {
 
@@ -35,15 +32,28 @@ public class CalculatorController {
                         double subtractResult = calculator.subtract(argumentsSubtract.get(0), argumentsSubtract.get(1));
                         userInterface.showResult(subtractResult);
                         break;
+                    case MULTIPLY:
+                        List<Double> argumentsMultiply = userInterface.getArguments();
+                        double multiplyResult = calculator.multiply(argumentsMultiply.get(0), argumentsMultiply.get(1));
+                        userInterface.showResult(multiplyResult);
+                        break;
+                    case DIVIDE:
+                        List<Double> argumentsDivide = userInterface.getArguments();
+                        if (argumentsDivide.get(1) == 0 || argumentsDivide.get(0) == 0) {
+                            userInterface.showMessage("Pamietaj nie dziel przez 0");
+                        } else {
+                            double divideResult = calculator.divide(argumentsDivide.get(0), argumentsDivide.get(1));
+                            userInterface.showResult(divideResult);
+                        }
+                        break;
                     case LAST_ANS:
                         double lastAns = calculator.lastAns();
                         userInterface.showResult(lastAns);
                         break;
                 }
-            }catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 userInterface.showMessage("Niepoprawny format liczby");
             }
-            userInterface.showMessage("Podaj poprawną operacje");
             operationType = userInterface.getOperationType();
         }
         userInterface.close();

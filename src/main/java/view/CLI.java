@@ -18,7 +18,8 @@ public class CLI implements IUserInterface {
 
     @Override
     public OperationType getOperationType() {
-        String messageOperation = "Podaj rodzaj operacji jaką chcesz wykonać: \n+ Dodawnie \n- Odejmowanie \n/ " + "" +
+        String messageOperation = "Podaj rodzaj operacji jaką chcesz wykonać: \n+ Dodawnie \n- Odejmowanie \n* Mnożenie \n/ Dzielenie \na" +
+                " " + "" +
                 "Ostatni zapamiętany wynik \nz Zakończ program";
         System.out.println(messageOperation);
         String answer = scanner.nextLine();
@@ -27,10 +28,14 @@ public class CLI implements IUserInterface {
             return OperationType.ADDITION;
         } else if (answer.equals("-")) {
             return OperationType.SUBTRACTION;
-        } else if (answer.equals("/")) {
+        } else if (answer.equals("a")) {
             return OperationType.LAST_ANS;
         } else if (answer.equals("z")) {
             return OperationType.FINISH;
+        } else if (answer.equals("*")) {
+            return OperationType.MULTIPLY;
+        } else if (answer.equals("/")) {
+            return OperationType.DIVIDE;
         }
         return OperationType.INVALID;
     }
@@ -40,10 +45,10 @@ public class CLI implements IUserInterface {
         List<Double> list = new ArrayList<>();
 
         for (int i = 1; i < 3; i++) {
-         
-                System.out.println("Podaj " + i + " liczbę ");
-                double number = Double.parseDouble(scanner.nextLine());
-                list.add(number);
+
+            System.out.println("Podaj " + i + " liczbę ");
+            double number = Double.parseDouble(scanner.nextLine());
+            list.add(number);
 
         }
         return list;

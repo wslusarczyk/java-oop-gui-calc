@@ -18,6 +18,21 @@ public class SimpleCalculator implements ICalculator {
         return subtract;
     }
 
+    @Override
+    public double multiply(double a, double b) {
+        double multiplyResult = a * b;
+        rememberAns(multiplyResult);
+        return multiplyResult;
+    }
+
+    @Override
+    public double divide(double a, double b) {
+        double devideResult = a / b;
+        rememberAns(devideResult);
+        return devideResult;
+    }
+
+
     protected void rememberAns(double ans) {
         lastAns = ans;
     }
