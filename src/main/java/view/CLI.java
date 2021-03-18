@@ -1,8 +1,6 @@
 package view;
 
 import model.OperationType;
-import model.SimpleCalculator;
-import org.graalvm.compiler.nodes.calc.IntegerDivRemNode;
 
 import java.util.ArrayList;
 import java.util.List;

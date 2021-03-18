@@ -13,6 +13,9 @@ public class CalculatorWithHistory extends SimpleCalculator {
 
     @Override
     public double lastAns() {
+        if(list.isEmpty()){
+            return 0;
+        }
         return list.removeLast();
     }
 }
