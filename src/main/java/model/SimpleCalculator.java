@@ -1,41 +1,24 @@
 package model;
 
 public class SimpleCalculator implements ICalculator {
+    private double lasAns;
+
     @Override
     public double sum(double a, double b) {
         double sum = a + b;
-        sum = rememberAns();
+        lasAns = sum;
         return sum;
     }
 
     @Override
     public double subtract(double a, double b) {
         double subtract = a - b;
-        subtract = rememberAns();
+        lasAns = subtract;
         return subtract;
     }
 
     @Override
-    public double multiply(double a, double b) {
-        double multiply = a * b;
-        multiply = rememberAns();
-        return multiply;
-    }
-
-    @Override
-    public double divide(double a, double b) {
-        double divide = a / b;
-        divide = rememberAns();
-        return divide;
-    }
-
-    @Override
     public double lastAns() {
-        return rememberAns();
-    }
-
-    protected Double rememberAns() {
-        double lastAns = 0;
-        return lastAns;
+        return lasAns;
     }
 }
