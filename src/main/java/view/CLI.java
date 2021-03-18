@@ -59,6 +59,6 @@ public class CLI implements IUserInterface {
 
     @Override
     public void close() {
-    ///!!!
+        scanner.close();
     }
 }

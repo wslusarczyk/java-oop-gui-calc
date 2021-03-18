@@ -40,8 +40,6 @@ public class CalculatorController {
         operationType = userInterface.getOperationType();
         }
 
-
+        userInterface.close();
     }
-
-
 }
