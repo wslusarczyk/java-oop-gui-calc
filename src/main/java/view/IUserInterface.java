@@ -7,7 +7,7 @@ import java.util.List;
 public interface IUserInterface {
     OperationType getOperationType();
     List<Double> getArguments();
-    void showResult();
+    void showResult(double operationResoult);
     void showMessage();
     void close();
 }
