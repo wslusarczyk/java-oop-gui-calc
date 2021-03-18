@@ -29,7 +29,7 @@ public class CLI implements IUserInterface {
             return OperationType.SUBTRACTION;
         } else if (answer.equals("/")) {
             return OperationType.LAST_ANS;
-        } else if (answer.equals("z")){
+        } else if (answer.equals("z")) {
             return OperationType.FINISH;
         }
         return OperationType.INVALID;
@@ -40,9 +40,11 @@ public class CLI implements IUserInterface {
         List<Double> list = new ArrayList<>();
 
         for (int i = 1; i < 3; i++) {
-            System.out.println("Podaj " + i + " liczbę ");
-            double number = Double.parseDouble(scanner.nextLine());
-            list.add(number);
+         
+                System.out.println("Podaj " + i + " liczbę ");
+                double number = Double.parseDouble(scanner.nextLine());
+                list.add(number);
+
         }
         return list;
     }
