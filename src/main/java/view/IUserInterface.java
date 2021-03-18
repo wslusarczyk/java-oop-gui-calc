@@ -8,6 +8,6 @@ public interface IUserInterface {
     OperationType getOperationType();
     List<Double> getArguments();
     void showResult(double operationResoult);
-    void showMessage();
+    void showMessage(String message);
     void close();
 }

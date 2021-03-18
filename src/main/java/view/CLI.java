@@ -53,8 +53,8 @@ public class CLI implements IUserInterface {
     }
 
     @Override
-    public void showMessage() {
-        System.out.println("");
+    public void showMessage(String message) {
+        System.out.println(message);
     }
 
     @Override
