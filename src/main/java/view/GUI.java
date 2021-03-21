@@ -24,8 +24,6 @@ public class GUI implements IUserInterface {
 
         frame.getContentPane().add(myLabel, BorderLayout.NORTH);
         frame.setVisible(true);
-
-
     }
 
     @Override
@@ -77,9 +75,9 @@ public class GUI implements IUserInterface {
     }
 
     @Override
-    public void showResult(double operationResoult) {
+    public void showResult(double operationResult) {
 
-        JOptionPane.showMessageDialog(frame, "Wynik dzialania to: " + operationResoult);
+        JOptionPane.showMessageDialog(frame, "Wynik dzialania to: " + operationResult);
     }
 
     @Override

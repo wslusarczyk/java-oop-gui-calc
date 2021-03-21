@@ -53,8 +53,8 @@ public class CLI implements IUserInterface {
     }
 
     @Override
-    public void showResult(double operationResoult) {
-        System.out.println("Wynik działania to: " + operationResoult);
+    public void showResult(double operationResult) {
+        System.out.println("Wynik działania to: " + operationResult);
     }
 
     @Override

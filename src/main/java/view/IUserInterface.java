@@ -10,7 +10,7 @@ public interface IUserInterface {
 
     List<Double> getArguments();
 
-    void showResult(double operationResoult);
+    void showResult(double operationResult);
 
     void showMessage(String message);
 
